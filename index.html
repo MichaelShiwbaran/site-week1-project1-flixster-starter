@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flixster Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="header">
+            <a id="returnhome" href=""><span id="popcorn">🍿</span><span class="websitename">Flixster</span></h1></a>
+        </div>
+    </header>
+    <form id="searchbar">
+        <input id ="search-input" type="text" name="search" placeholder="Search Movies" required/>
+        <input id ="searchbutton" type="submit" value="Enter" name="submit" required/>
+      </form>
+    <main>
+        <div id="movie-card">
+            <button id="close-search-button">Return</button>
+            <div id="movieinfo">
+            <img class="background" alt="' + title + ' backdrop" src="' + backdrop + '">
+            <div id="secondrow">
+                <img class="movie-poster" alt="' + title + 'movie poster" src="' + poster + '">
+                <div id="info">
+                    <span class="genre">'genres'</span>
+                    <h2 class= "movie-title">'title'</h2>
+                    <div id="nextrow">
+                        <span class= "movielength">'runtime' min</span>
+                        <span id="dividemovies">-</span>
+                        <span class="releasedate">'release'</span>
+                    </div>
+                    <div id="rating">
+                        <img class= "ratingstar" alt="star.png" src="https://cdn.pixabay.com/photo/2013/07/12/17/39/star-152151_1280.png" />
+                        <span class="movie-votes">'score'</span>
+                    </div>
+                </div>
+                <span class="moviedescription">'description'</span></div>'
+            </div>
+        </div>     
+        <div id="movies-grid">
+        </div>
+        <div>
+            <button id="load-more-movies-btn">More Movies</button>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+<script>
+
+  </script>
+</html>
