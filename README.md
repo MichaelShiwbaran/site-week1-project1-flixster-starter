@@ -4,7 +4,7 @@ Submitted by: **Michael Shiwbaran**
 
 Estimated time spent: **11-12** hours spent in total
 
-Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Flixster Deployed Site][(https://michaelshiwbaran.github.io/site-week1-project1-flixster-starter/)]
 
 ### Application Features
 
