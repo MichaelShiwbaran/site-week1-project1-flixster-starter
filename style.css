@@ -1,1 +1,282 @@
+* {
+    margin: 0px;
+    padding:0px;
+    border:0px;
+}
 
+body{
+    background-color: #343434;
+    font-family: 'Times New Roman', Times, serif;
+    color:white;
+    display: flex;
+    flex-flow:column nowrap;
+} 
+ 
+
+/*HEADER SECTION CSS*/
+header {
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: center;
+    width: 100vw;
+    padding:8px ;
+}
+
+.websitename{
+    width:150px;
+    justify-content: center;
+    margin-left: 8px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#searchbar{
+    flex-grow:1;
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: center;
+    padding-right: 16px;
+    align-self: center;
+}
+
+#searchbar input {
+    flex:1;
+    font-size: 16px;
+    background-color:black ;
+    color: white;
+    justify-content: center;
+    height: 35px;
+}
+
+#searchbar #searchbutton {
+    border-radius: 5%;
+    background-color: white;
+    color:black;
+    border: 1px lightgray solid;
+    font-size: 15px;
+    width: 65px;
+}
+
+#returnhome {
+    text-decoration: none;
+    color: white;
+}
+
+
+#popcorn {
+    display: inline-block;
+    animation: animate_popcorn 800s infinite;
+}
+
+@keyframes animate_popcorn {
+    0% {
+        transform: rotate(0);
+      }
+      50% {
+        transform: rotate(45deg);
+      }
+      100% {
+        transform: rotate(0);
+      }
+}
+
+/* MAIN SECTION CSS*/
+main {
+    display: flex;
+    flex-flow:column nowrap;
+    align-items: center;
+}
+
+/* MOVIE LIST SECTION CSS*/
+#movie-card{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow:column nowrap;
+    overflow-y:auto;
+    left: 0;
+    right:0;
+    top:0;
+    background-color: #343434;
+    color:white;
+    display: none;
+    padding-bottom: 300px;
+    z-index: 2;
+    position: fixed;
+}
+
+#movie-card #close-search-button{
+    display: grid;
+    font-size: 32px;
+    background-color: white;
+    color: black;
+    padding: 8px;
+    margin-bottom: 16px;
+    border-radius: 5%;
+}
+
+#movie-card .background {
+    display: flex;
+    align-self: center;
+    flex-grow: 1;
+    max-width:100vw;
+    z-index: 0;
+}
+
+#info {
+    display: grid;
+}
+
+.moviedescription {
+    display: flex;
+}
+
+.background #info{
+    display: flex;
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+#movie-card .ratingstar{
+    height: 30px;
+}
+
+#dividemovies{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+
+/* MOVIE GRID SECTION CSS */
+#movies-grid {
+    width:80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.movie-card {
+    flex: 1 0 350px;
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 24px;
+    margin: 16px;
+}
+
+.movie-card:hover{
+    width: 355px;
+    margin: 10px 13.5px;
+}
+
+.movie-card:hover .movie-poster{
+    /* makes the box have a white glow */
+    box-shadow: 0px 0px 20px white;
+}
+
+.movie-card .movie-poster {
+    align-self: flex-end;
+    width:100%;
+    border-radius: 3%;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.movie-bar {
+    padding: 4px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movie-card .ratingstar {
+    height:  30px;
+    margin-right: 8px;
+}
+
+.movie-card .movie-votes {
+    display: flex;
+    align-items: center;
+}
+
+#load-more-movies-btn {
+    display: block;
+    height: 75px;
+    width: 200px;
+    align-self: center;
+    border-radius: 5%;
+    background-color: white;
+    color:black;
+    border: 1px lightgray solid;
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+
+/*This is to make the webpage responsive to different page sizes */
+@media (max-width:900px){
+    #movie-card{
+        align-items: center;
+    }
+
+    #movie-card .background{
+        display: none;
+    }
+
+    #movie-card .movie-poster{
+        width: 70%;
+    }
+
+    #movieinfo{
+        align-items: center;
+        flex-flow: column nowrap;
+    }
+
+    #secondrow{
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    header {
+        flex-flow:column nowrap ;
+        height: 150px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header #header{
+        margin-bottom: 8px;
+    }
+
+    header form{
+        width:90%;
+    }
+
+    
+}
+@media (min-width:900px){
+    #movie-card .movie-poster{
+        position: relative;
+        bottom:300px;
+        margin-bottom: -300px;
+        max-height: 450px;
+    }
+
+    #movie-card #secondrow {
+        margin-bottom: -300px;
+        flex-flow: row nowrap;
+    }
+
+    #info{
+        flex: 1 0 175px;
+    }
+}
+
+@media (min-width:1700px) {
+    #movie-card .background{
+        max-width:1500px ;
+        margin-bottom: 8px;
+    }
+    #movie-card .movie-poster{
+        max-width:300px ;
+    }
+}
+/* End of CSS */
